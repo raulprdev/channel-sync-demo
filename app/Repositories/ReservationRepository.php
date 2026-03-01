@@ -6,6 +6,7 @@ use App\Enums\ReservationStatus;
 use App\Models\Reservation;
 use App\Repositories\Contracts\ReservationRepositoryInterface;
 use Carbon\Carbon;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 class ReservationRepository implements ReservationRepositoryInterface
@@ -48,6 +49,13 @@ class ReservationRepository implements ReservationRepositoryInterface
             ->orderByDesc('created_at')
             ->limit($limit)
             ->get();
+    }
+
+    public function getRecentPaginated(int $perPage = 15): LengthAwarePaginator
+    {
+        return Reservation::with(['channel', 'property'])
+            ->orderByDesc('created_at')
+            ->paginate($perPage);
     }
 
     public function countByStatus(ReservationStatus $status): int

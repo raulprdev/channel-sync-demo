@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\ActivityLogController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/activity-log', ActivityLogController::class)->name('activity-log');
