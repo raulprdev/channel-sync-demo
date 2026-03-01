@@ -9,9 +9,7 @@ jobs:
   deploy:
     uses: raulprdev/aws-shared-hosting/.github/workflows/deploy-laravel.yml@main
     with:
-      app_name: ${{ secrets.APP_NAME }}
-      ec2_instance_id: ${{ secrets.EC2_INSTANCE_ID }}
+      app_name: ${{ vars.APP_NAME }}
+      ec2_instance_id: ${{ vars.EC2_INSTANCE_ID }}
       deploy_bucket: shared-hosting-deploy
-    secrets:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    secrets: inherit
