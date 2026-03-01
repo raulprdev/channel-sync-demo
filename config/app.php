@@ -123,4 +123,9 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'links' => [
+        'article' => 'https://raulpr.dev/articles/ota-webhook-integration-a-weekend-in-someone-elses-problem-space/',
+        'source' => 'https://github.com/raulprdev/channel-sync-demo',
+    ],
+
 ];

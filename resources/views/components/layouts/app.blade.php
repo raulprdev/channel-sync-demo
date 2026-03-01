@@ -19,10 +19,10 @@
                 🔬 This is an experiment in OTA integration patterns.
             </p>
             <div class="flex items-center space-x-4 text-sm">
-                <a href="https://raulpr.dev/articles/ota-webhook-integration-yet-another-laravel-experiment" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                <a href="{{ config('app.links.article') }}" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium">
                     Read the article &rarr;
                 </a>
-                <a href="https://github.com/raulprdev/channel-sync-demo" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                <a href="{{ config('app.links.source') }}" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium">
                     View source &rarr;
                 </a>
             </div>
