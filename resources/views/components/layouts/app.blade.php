@@ -13,6 +13,22 @@
         </div>
     </header>
 
+    <div class="bg-indigo-50 border-b border-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <p class="text-sm text-indigo-700">
+                🔬 This is an experiment in OTA integration patterns.
+            </p>
+            <div class="flex items-center space-x-4 text-sm">
+                <a href="https://raulpr.dev/articles/ota-webhook-integration-yet-another-laravel-experiment" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                    Read the article &rarr;
+                </a>
+                <a href="https://github.com/tanohb/channel-sync-demo" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                    View source &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+
     <main class="max-w-7xl mx-auto px-4 py-6">
         {{ $slot }}
     </main>
